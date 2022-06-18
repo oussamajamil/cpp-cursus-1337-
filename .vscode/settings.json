@@ -1,0 +1,7 @@
+{
+    "nuxt.isNuxtApp": false,
+    "files.associations": {
+        "iosfwd": "cpp",
+        "iostream": "cpp"
+    }
+}
