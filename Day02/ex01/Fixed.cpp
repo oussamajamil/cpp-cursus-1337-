@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macbookprom12020 <macbookprom12020@stud    +#+  +:+       +#+        */
+/*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 12:03:02 by macbookprom       #+#    #+#             */
-/*   Updated: 2022/06/16 10:47:24 by macbookprom      ###   ########.fr       */
+/*   Updated: 2022/06/18 09:54:49 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 Fixed::Fixed()
 {
     std::cout << "Default constructor called" << std::endl;
-    this->_value = 112;
+    this->_value = 0;
 }
 Fixed::~Fixed()
 {

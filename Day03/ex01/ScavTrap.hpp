@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 12:47:05 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/19 13:09:42 by ojamil           ###   ########.fr       */
+/*   Created: 2022/06/19 10:49:11 by ojamil            #+#    #+#             */
+/*   Updated: 2022/06/19 11:35:25 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef __SCAVTRAP__
+#define __SCAVTRAP__
 
-#include "Weapon.hpp"
-
-Weapon::Weapon(){}
-Weapon::Weapon(std::string type){
-	this->_type = type;
-}
-Weapon::~Weapon(){}
-
-
-std::string Weapon::getType() const{
-	return this->_type;
-}
-
-void Weapon::setType(std::string type){
-	this->_type = type;
-}
+#include "ClapTrap.hpp"
+class ScavTrap:public ClapTrap{
+	private:
+		///no data all data in clap trap
+	public:
+	ScavTrap();
+	ScavTrap(std::string name);
+	ScavTrap(const ScavTrap &sc);
+	~ScavTrap();
+	ScavTrap &operator=(const ScavTrap &ST);
+	void attack(const std::string& target);
+	void guardGate();
+};
+#endif

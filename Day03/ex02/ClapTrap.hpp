@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 15:18:08 by macbookprom       #+#    #+#             */
-/*   Updated: 2022/06/18 10:10:24 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/06/19 11:55:10 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 class ClapTrap
 {
-private:
+protected:
     std::string _name;
     unsigned int _HitPoints;
     unsigned int _EnergyPoints;
@@ -31,9 +31,9 @@ public:
     void beRepaired(unsigned int amount);
     // geters
     std::string getName();
-    unsigned int getHitPoints();
-    unsigned int getEnergyPoints();
-    unsigned int getAttackDamage();
+     int getHitPoints();
+     int getEnergyPoints();
+     int getAttackDamage();
     // seters
     void setName(std::string const n);
     void setHitPoints(unsigned int const Hitpoints);

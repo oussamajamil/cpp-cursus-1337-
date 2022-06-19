@@ -1,12 +1,22 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: macbookprom12020 <macbookprom12020@stud    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/15 21:44:38 by macbookprom       #+#    #+#              #
-#    Updated: 2022/06/15 21:44:39 by macbookprom      ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME = weapon
 
+FLAGE = g++ -Wall -Wextra -Werror
+
+HEADERS = HumanA.hpp
+HEADERS += HumanB.hpp
+HEADERS += Weapon.hpp
+
+SRC = HumanA.cpp
+SRC += HumanB.cpp
+SRC += Weapon.cpp
+
+
+all: $(NAME)
+
+$(NAME):$(HEADERS) $(SRC)
+		$(FLAGE) $(SRC) -o $(NAME)
+
+clean:
+	rm -rf $(NAME)
+fclean: clean
+re: fclean all

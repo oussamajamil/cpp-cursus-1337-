@@ -3,27 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macbookprom12020 <macbookprom12020@stud    +#+  +:+       +#+        */
+/*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/06 21:13:53 by macbookprom       #+#    #+#             */
-/*   Updated: 2022/06/06 21:19:23 by macbookprom      ###   ########.fr       */
+/*   Created: 2022/06/19 13:08:16 by ojamil            #+#    #+#             */
+/*   Updated: 2022/06/19 13:08:17 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include <iostream>
-int main (){
-    std::string A="HI THIS IS BRAIN";
-    std::string *stringPTR = &A;
-    std::string &stringREF = A;
+int main(){
+	std::string A = "HI THIS IS BRAIN";
+	std::string *stringPTR = &A;
+	std::string& stringREF = A;
 
-    std::cout << "address A : " << &A << std::endl;
-    std::cout << "address stringPTR : " << &stringPTR << std::endl;
-    std::cout << "address stringREF : " << &stringREF << std::endl;
+	std::cout <<  &A << std::endl;
+	std::cout <<&stringPTR << std::endl;
+	std::cout << &stringREF << std::endl;
 
-
-    std::cout << "value A : " << A << std::endl;
-    std::cout << "value stringPTR : " << *stringPTR << std::endl;
-    std::cout << "value stringREF : " << stringREF << std::endl;
-
-    return 0;
+	std::cout <<  A << std::endl;
+	std::cout <<*stringPTR << std::endl;
+	std::cout << stringREF << std::endl;
 }
+

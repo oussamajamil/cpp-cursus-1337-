@@ -15,6 +15,7 @@ ClapTrap::ClapTrap(std::string n):_name(n){
 	this->_EnergyPoints= 10;
 	this->_AttackDamage = 0;
 }
+
 ClapTrap::~ClapTrap() {
 	 std::cout << "Destructor called" << std::endl;
 }
@@ -24,15 +25,15 @@ std::string ClapTrap::getName()
 {
     return this->_name;
 }
-unsigned int ClapTrap:: getHitPoints()
+ int ClapTrap:: getHitPoints()
 {
     return this->_HitPoints;
 }
-unsigned int ClapTrap::getEnergyPoints()
+ int ClapTrap::getEnergyPoints()
 {
     return this->_EnergyPoints;
 }
-unsigned int ClapTrap::getAttackDamage()
+ int ClapTrap::getAttackDamage()
 {
     return this->_AttackDamage;
 }
@@ -63,7 +64,7 @@ void ClapTrap::attack(const std::string& target)
 		return;
 	}
 	this->_EnergyPoints--;
-	std::cout << "ClapTrap "+ this->getName() + " attaks,causing " << this->getAttackDamage() <<" points of damage! " <<std::endl;
+	std::cout << "ClapTrap "+ this->getName() + " attaks,causing "  << this->getAttackDamage() <<" points of damage! " <<std::endl;
 }
 void ClapTrap::takeDamage(unsigned int amount){
 	if(this->_HitPoints <= 0)

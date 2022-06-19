@@ -3,23 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macbookprom12020 <macbookprom12020@stud    +#+  +:+       +#+        */
+/*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/06 21:38:33 by macbookprom       #+#    #+#             */
-/*   Updated: 2022/06/06 22:05:12 by macbookprom      ###   ########.fr       */
+/*   Created: 2022/06/19 13:09:18 by ojamil            #+#    #+#             */
+/*   Updated: 2022/06/19 13:09:19 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
 #include "HumanA.hpp"
 
-HumanA::HumanA(Weapon &Weapon) : _weapon(Weapon)
-{
-}
-HumanA::HumanA(std::string name, Weapon &Weapon) : name(name), _weapon(Weapon)
-{
+HumanA::HumanA(std::string name,Weapon &w):weapon(w){
+	this->name= name;
 }
 
-
-
+void HumanA::attack(){
+	if(this->weapon.getType() =="")
+		std::cout<< "not have Weapon" <<std::endl;
+	else
+	{
+		std::cout << this->name << "attacks with their "<<this->weapon.getType() << std::endl;
+	}
+}
 
 
