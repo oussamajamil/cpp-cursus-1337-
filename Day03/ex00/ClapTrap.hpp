@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 15:18:08 by macbookprom       #+#    #+#             */
-/*   Updated: 2022/06/18 10:10:24 by ojamil           ###   ########.fr       */
+/*   Created: 2022/06/24 15:07:18 by ojamil            #+#    #+#             */
+/*   Updated: 2022/06/24 15:07:22 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,17 @@ private:
 public:
     ClapTrap();
 	ClapTrap(std::string name);
+	ClapTrap(const ClapTrap &C);
+ 	ClapTrap &operator=(const ClapTrap &c);
     ~ClapTrap();
     void attack(const std::string &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
     // geters
-    std::string getName();
-    unsigned int getHitPoints();
-    unsigned int getEnergyPoints();
-    unsigned int getAttackDamage();
+    std::string getName()const;
+    unsigned int getHitPoints()const;
+    unsigned int getEnergyPoints()const;
+    unsigned int getAttackDamage()const;
     // seters
     void setName(std::string const n);
     void setHitPoints(unsigned int const Hitpoints);

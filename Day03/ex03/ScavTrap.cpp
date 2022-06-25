@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 11:14:40 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/24 17:06:50 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/06/24 17:09:31 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 
 ScavTrap::ScavTrap(){
-	std::cout << "default construction" <<std::endl;
+	std::cout << "default construction ScavTrap" <<std::endl;
 	this->setAttackDamage(20);
 	this->setEnergyPoints(50);
 	this->setHitPoints(100);
 }
 
 ScavTrap::ScavTrap(std::string name){
-	std::cout << "psrametrs construction" <<std::endl;
+	std::cout << "psrametrs construction ScavTrap" <<std::endl;
 	this->setName(name);
 	this->setAttackDamage(20);
 	this->setEnergyPoints(50);
@@ -34,18 +34,17 @@ ScavTrap::ScavTrap(const ScavTrap &ST){
 }
 ScavTrap &ScavTrap::operator= (const ScavTrap &ST){
 	std::cout  << "Copy assignment evolution to ScavTrap" << std::endl;
-    if (this != &ST)
-    {
-        this->setName(ST._name);
-        this->setHitPoints(ST._HitPoints);
-        this->setEnergyPoints(ST._EnergyPoints);
-        this->setAttackDamage(ST._AttackDamage);
-    }
-    return *this;
+   	if(this != &ST){
+		this->setName(ST.getName());
+		this->setHitPoints(ST.getHitPoints());
+		this->setEnergyPoints(ST.getEnergyPoints());
+		this->setAttackDamage(ST.getAttackDamage());
+	}
+	return (*this);
 }
 
 ScavTrap::~ScavTrap(){
-	std::cout <<  "Deconstractor ScavTrap" << std::endl;
+std::cout <<  "Destructor ScavTrap" << std::endl;
 }
 
 
@@ -63,6 +62,6 @@ void ScavTrap::attack(const std::string& target){
 	else
 	{
 		this->_EnergyPoints--;
-	std::cout << "ScavTrap "+ this->getName() + " attaks    "<<target<<"  ,causing "  << this->getAttackDamage() <<" points of damage! " <<std::endl;
+		std::cout << "ScavTrap "+ this->getName() + " attaks " << target << ",causing "  << this->getAttackDamage() <<" points of damage! " <<std::endl;
 	}
 }

@@ -5,14 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 15:18:01 by macbookprom       #+#    #+#             */
-/*   Updated: 2022/06/19 10:34:34 by ojamil           ###   ########.fr       */
+/*   Created: 2022/06/24 15:07:48 by ojamil            #+#    #+#             */
+/*   Updated: 2022/06/24 15:28:23 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
-	std::cout << "hello i am here "<< std::endl;
+	ClapTrap c;
+	ScavTrap s1("oussama");
+	ScavTrap s2(s1);
+
+	s2.attack("aaaa");
+	s2.beRepaired(2);
+	s2.guardGate();
+	
 }

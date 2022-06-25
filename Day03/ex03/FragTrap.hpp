@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 13:10:15 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/19 14:20:46 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/06/24 19:19:55 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define __FRAGTRAP__
 
 #include "ClapTrap.hpp"
-class FragTrap:public ClapTrap
+class FragTrap:virtual public ClapTrap
 {
 private:
 	/* data */
