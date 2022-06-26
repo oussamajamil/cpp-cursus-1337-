@@ -4,14 +4,17 @@ HEADER = Cat.hpp\
 		Dog.hpp\
 		Animal.hpp\
 		WrongAnimal.hpp\
-		WrongCat.hpp
+		WrongCat.hpp\
+		Brain.hpp\
+
 
 SRC =  Cat.cpp\
 		Dog.cpp\
 		Animal.cpp\
 		main.cpp\
 		WrongAnimal.cpp\
-		WrongCat.cpp
+		WrongCat.cpp\
+		Brain.cpp
 	
 $(NAME):$(SRC) $(HEADER)
 	$(FLAG) $(SRC) -o $(NAME)
