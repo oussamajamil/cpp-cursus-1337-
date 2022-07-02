@@ -15,15 +15,15 @@
 #include <iostream>
 class Animal
 {
-private:
+protected:
 	std::string _type;
 public:
-	Animal(/* args */);
+	Animal();
 	Animal(const Animal &A);
 	Animal &operator = (const Animal &a);
 	std::string GetType()const;
 	void SetType(const std::string T) ;
-	virtual void makeSound();
+	virtual void makeSound()const;
 	~Animal();
 };
 #endif

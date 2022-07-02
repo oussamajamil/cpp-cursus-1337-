@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/25 11:33:00 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/25 13:28:20 by ojamil           ###   ########.fr       */
+/*   Created: 2022/06/25 13:03:39 by ojamil            #+#    #+#             */
+/*   Updated: 2022/06/26 10:43:24 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CAT__
-#define __CAT__
-#include "Animal.hpp"
 
-class Cat:public Animal
+#ifndef __DOG__
+#define __DOG__
+#include "Animal.hpp"
+#include "Brain.hpp"
+class Dog:public Animal
 {
 private:
-
+	Brain *brain;
 public:
-	Cat();
-	Cat(const Cat &A);
-	Cat &operator = (const Cat &a);
-	void makeSound()const;
-	~Cat();
+	Dog();
+	Dog(const Dog &A);
+	Dog &operator = (const Dog &a);
+	virtual void makeSound()const;
+	virtual ~Dog();
+	void setIdea(int i, std::string idea);
+	void getIdeas()const;
 };
 #endif
 

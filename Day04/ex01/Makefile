@@ -1,17 +1,17 @@
 NAME = Animal
 FLAG = c++  -Wall -Wextra -Werror
-HEADER = Cat.hpp\
+
+HEADER =Cat.hpp\
 		Dog.hpp\
 		Animal.hpp\
-		WrongAnimal.hpp\
-		WrongCat.hpp
+		Brain.hpp\
 
-SRC =  Cat.cpp\
-		Dog.cpp\
-		Animal.cpp\
-		main.cpp\
-		WrongAnimal.cpp\
-		WrongCat.cpp
+
+SRC =Cat.cpp\
+	Dog.cpp\
+	Animal.cpp\
+	main.cpp\
+	Brain.cpp
 
 $(NAME):$(SRC) $(HEADER)
 	$(FLAG) $(SRC) -o $(NAME)

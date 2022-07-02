@@ -23,7 +23,7 @@ public:
 	Dog();
 	Dog(const Dog &A);
 	Dog &operator = (const Dog &a);
-	void makeSound();
+	void makeSound()const;
 	~Dog();
 };
 #endif

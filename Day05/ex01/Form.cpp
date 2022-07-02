@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/25 11:33:00 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/25 13:28:20 by ojamil           ###   ########.fr       */
+/*   Created: 2022/07/02 15:01:40 by ojamil            #+#    #+#             */
+/*   Updated: 2022/07/02 16:46:42 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CAT__
-#define __CAT__
-#include "Animal.hpp"
+#include "Form.hpp"
 
-class Cat:public Animal
-{
-private:
 
-public:
-	Cat();
-	Cat(const Cat &A);
-	Cat &operator = (const Cat &a);
-	void makeSound()const;
-	~Cat();
-};
-#endif
+Form::Form():_name("test"),_gradsign(2),_gradexecute(1){}
+Form::Form(std::string name,bool s,int grad,int gradex):_name(name),_gradsign(grad),_gradexecute(gradex){
+	this->_sign = s;
+}
 
+Form::Form(const Form &f):_name(f._name),_gradsign(f._gradsign),

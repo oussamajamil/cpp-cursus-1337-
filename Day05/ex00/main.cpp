@@ -5,21 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 11:01:37 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/26 15:03:29 by ojamil           ###   ########.fr       */
+/*   Created: 2022/07/02 11:00:53 by ojamil            #+#    #+#             */
+/*   Updated: 2022/07/02 14:20:26 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Bureaucrat.hpp"
 
-int main (){
-	int cp = 10;
-	Zombie *z;
-	z = zombieHorde(cp,"oussama");
-	for (int i = 0; i < cp; i++)
-	{
-		z[i].announce();
+int main(){
+	try{
+		Bureaucrat b;
+		b.setGrade(100);
+		Bureaucrat b1("oussama",1);
+		Bureaucrat b2("oussama",149);
+		std::cout << b << std::endl;
+		std::cout << b1 <<std::endl;
+		std::cout << b2 <<std::endl;
+		b1.upgrade();
+		b.upgrade();
+		b2.downgrade();
+		b2.downgrade();
+
+		std::cout << b << std::endl;
+		std::cout << b1 <<std::endl;
+		std::cout << b2 <<std::endl;
 	}
-	delete[] z;
-
+	catch(std::exception &ex){
+		std::cout << ex.what() << std::endl;
+	}
 }
