@@ -12,9 +12,8 @@ Brain::Brain(const Brain &B){
 Brain &Brain::operator=(const Brain &B){
     std::cout << "copy operators equalsn Brain"<<std::endl;
     if(this != &B)
-    {
-        for(int i=0; i < 100;i++)
-		{
+        {
+        for(int i=0; i < 100;i++){
             this->ideas[i] =B.ideas[i];
         }
     }
@@ -23,8 +22,9 @@ Brain &Brain::operator=(const Brain &B){
 
 std::string Brain::getIdea(int i) const{
     if(i < 0 || i >= 100)
-   return("Brain Introvable");
-    return (this->ideas[i]);
+        std::cout << "Brain Introvable" << std::endl;
+    else
+        return this->ideas[i];
 }
 void  Brain::setIdea(int i,std::string sn){
      if(i < 0 || i >= 100)
@@ -32,7 +32,6 @@ void  Brain::setIdea(int i,std::string sn){
     else
         this->ideas[i] = sn;
 }
-
 Brain::~Brain(){
     std::cout << "Destructor Brain"<<std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 13:03:39 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/26 10:43:24 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/07/02 16:50:57 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ public:
 	Dog(const Dog &A);
 	Dog &operator = (const Dog &a);
 	virtual void makeSound()const;
+	Brain *getBrain()const;
+	void setBrain(const Brain &b);
 	virtual ~Dog();
-	void setIdea(int i, std::string idea);
-	void getIdeas()const;
 };
 #endif
 

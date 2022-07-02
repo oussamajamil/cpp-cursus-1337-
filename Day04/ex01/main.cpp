@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 13:30:05 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/26 11:35:04 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/07/02 16:51:01 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,63 +17,22 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 int main(){
-	 std::cout << "----------------------------------" << std::endl;
-    const Animal    *meta[10];
-    for (int i = 0; i < 10; i++)
-    {
-        if (i % 2)
-        {
-            meta[i] = new Cat();
-            if (meta[i] == NULL)
-            {
-                std::cout << "Cat Allocation Failed !" << std::endl;
-                exit(1);
-            }
-        }
-        else
-        {
-            meta[i] = new Dog();
-            if (meta[i] == NULL)
-            {
-                std::cout << "Dog Allocation Failed !" << std::endl;
-                exit(1);
-            }
-        }
-    }
-    std::cout << std::endl;
-    std::cout << "----------------------------------" << std::endl;
-    for (int i = 0; i < 10; i++)
-    {
-        std::cout<< "Animal Type : " << meta[i]->GetType() << std::endl;
-        meta[i]->makeSound();
-        std::cout << std::endl;
-    }
-    std::cout << "----------------------------------" << std::endl;
-    for (int i = 0; i < 10; i++)
-        delete(meta[i]);
-    std::cout << "----------------------------------" << std::endl;
-    std::cout << "----------------------------------" << std::endl;
-    std::cout << "----------------------------------" << std::endl;
-    std::cout << "Deep Copy Tests !" << std::endl;
+const Animal* meta = new Animal();
+const Animal* j = new Dog();
+const Animal* i = new Cat();
+const WrongAnimal *wa = new WrongAnimal();
+const WrongAnimal *wc = new WrongCat();
 
-    Cat *a = new Cat();
-    Cat *b = new Cat();
+std::cout << j->GetType() << " " << std::endl;
+std::cout << i->GetType() << " " << std::endl;
+j->makeSound();
+i->makeSound();
+meta->makeSound();
 
-    for (int i = 0; i < 50; i++)
-        a->setIdea(i, "Time to annoy some humans ! :3");
-    for (int i = 50; i < 98; i++)
-        a->setIdea(i, "Time to be cute and get some food from those annoying humans ! :3" );
+std::cout<<wa->GetType()<< " "  << std::endl;
+std::cout << wc->GetType() << " "  << std::endl;
 
-    *b = *a;
-    delete (a);
-    b->getIdeas();
-    std::cout << "----------------------------------" << std::endl;
-    b->setIdea(99, "Time to sleep ! :3");
-    b->setIdea(100, "nope !");
-    b->getIdeas();
-    std::cout << "----------------------------------" << std::endl;
-    std::cout << "----------------------------------" << std::endl;
-    delete (b);
-
+wa->makeSound();
+wc->makeSound();
 return 0;
 }

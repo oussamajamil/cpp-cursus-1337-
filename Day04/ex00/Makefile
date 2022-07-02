@@ -12,7 +12,6 @@ SRC =  Cat.cpp\
 		main.cpp\
 		WrongAnimal.cpp\
 		WrongCat.cpp
-
 $(NAME):$(SRC) $(HEADER)
 	$(FLAG) $(SRC) -o $(NAME)
 

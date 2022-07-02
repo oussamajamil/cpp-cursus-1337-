@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 12:50:19 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/26 10:46:28 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/07/02 16:50:35 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Cat &Cat::operator=(const Cat &A){
 	std::cout  << "Copy assignment  to Cat" << std::endl;
 	if(this != &A){
 		this->SetType(A.GetType());
-		*this->brain = *A.brain;
+		*this->brain = *A.getBrain();
 	}
 	return(*this);
 }
@@ -42,20 +42,10 @@ void Cat::makeSound()const{
 	std::cout << "myaw  myaw myaw"<<std::endl;
 }
 
-void    Cat::getIdeas()const
-{
-    for (int i = 0; i < 100 ; i++)
-    {
-        std::cout << " Idea " << i << "the Cat: " << this->brain->getIdea(i) << std::endl;
-    }
+Brain *Cat::getBrain()const {
+	return this->brain;
 }
 
-void    Cat::setIdea(int i, std::string idea)
-{
-	if(i < 0 || i >= 100)
-	{
-		std::cout <<"idea < 100 and >= 0" <<std::endl;
-		return ;
-	}
-    this->brain->setIdea(i, idea);
+void Cat::setBrain(const Brain *b){
+	this->brain =b;
 }

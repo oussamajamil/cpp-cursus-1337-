@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 11:15:38 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/26 11:36:21 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/07/02 16:50:11 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ public:
 	std::string GetType()const;
 	void SetType(const std::string T) ;
 	virtual void makeSound()const;
-	virtual ~Animal();
+	~Animal();
 };
 #endif

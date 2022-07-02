@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 13:03:35 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/26 10:46:44 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/07/02 16:50:49 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Dog &Dog::operator=(const Dog &A){
 	std::cout  << "Copy assignment  to Dog" << std::endl;
 	if(this != &A){
 		this->SetType(A.GetType());
-		*this->brain = *A.brain;
+		*this->brain = *A.getBrain();
 	}
 	return(*this);
 }
@@ -38,20 +38,9 @@ Dog::~Dog(){
 void Dog::makeSound()const{
 	std::cout << "haw haw haw"<< std::endl;
 }
-void    Dog::getIdeas()const
-{
-    for (int i = 0; i < 100 ; i++)
-    {
-        std::cout << " Idea " << i << "the Dog: " << this->brain->getIdea(i) << std::endl;
-    }
+Brain *Dog::getBrain() const{
+	return this->brain;
 }
-
-void    Dog::setIdea(int i, std::string idea)
-{
-	if(i < 0 || i >= 100)
-	{
-		std::cout <<"idea < 100 and >= 0" <<std::endl;
-		return ;
-	}
-    this->brain->setIdea(i, idea);
+void Cat::setBrain(const Brain *b){
+	this->brain =b;
 }

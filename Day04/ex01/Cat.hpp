@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 11:33:00 by ojamil            #+#    #+#             */
-/*   Updated: 2022/06/26 10:42:39 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/07/02 16:50:28 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ public:
 	Cat &operator = (const Cat &a);
 	void makeSound()const;
 	virtual ~Cat();
-	void setIdea(int i, std::string idea);
-	void getIdeas()const;
+	Brain *getBrain()const;
+	void setBrain(const Brain &b);
+
 };
 #endif
 
