@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Sat Jul  2 16:01:47 2022
+# Make data base, printed on Sun Jul  3 12:02:45 2022
 
 # Variables
 
@@ -36,11 +36,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cfk40033mj/T/vscode-ipc-637b0879-7427-4a55-a117-0faab7e6fb08.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cfk40033mj/T/vscode-ipc-f7d150bc-f1bf-4a7d-964b-88351078a6f0.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.ipHlCTXid7/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.j0dP6vsIM0/Render
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
@@ -52,7 +52,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.QSIC8Td4DB/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.nPP5XhXvWd/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -72,7 +72,7 @@ VSCODE_CODE_CACHE_PATH = /Users/ojamil/Library/Application Support/Code/CachedDa
 # environment
 LOGNAME = ojamil
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/ojamil/.oh-my-zsh
 # environment
@@ -114,7 +114,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000004.Electron
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000002.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -144,7 +144,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1981
+VSCODE_PID = 2842
 # variable set hash-table stats:
 # Load=67/1024=7%, Rehash=0, Collisions=1/88=1%
 
@@ -228,7 +228,7 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sat Jul  2 16:01:47 2022
+# Finished Make data base on Sun Jul  3 12:02:45 2022
 
  
 make: *** No rule to make target `all'.  Stop.
