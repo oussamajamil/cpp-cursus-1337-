@@ -5,8 +5,6 @@ HEADER =Bureaucrat.hpp\
 		PresidentialPardonForm.hpp\
 		RobotomyRequestForm.hpp\
 		ShrubberyCreationForm.hpp\
-		Intern.hpp
-
 
 
 
@@ -16,7 +14,6 @@ SRC = Bureaucrat.cpp\
 	PresidentialPardonForm.cpp\
 	RobotomyRequestForm.cpp\
 	ShrubberyCreationForm.cpp\
-	Intern.cpp
 
 $(NAME):$(SRC) $(HEADER)
 	$(FLAG) $(SRC) -o $(NAME)

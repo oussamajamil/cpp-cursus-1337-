@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:02:26 by ojamil            #+#    #+#             */
-/*   Updated: 2022/07/11 12:44:47 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/07/11 12:35:25 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Form
 	Form(std::string name,bool s,int grad,int gradex);
 	Form &operator=(const Form &F);
 	Form(const Form &F);
-	virtual ~Form();
+	~Form();
 	class GradeTooHighException:public std::exception
 	{
 		public:

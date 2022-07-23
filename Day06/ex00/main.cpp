@@ -5,34 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/03 12:31:00 by ojamil            #+#    #+#             */
-/*   Updated: 2022/07/11 12:39:58 by ojamil           ###   ########.fr       */
+/*   Created: 2022/07/23 02:33:30 by ojamil            #+#    #+#             */
+/*   Updated: 2022/07/23 03:53:52 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "Bureaucrat.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "Intern.hpp"
+#include "Convert.hpp"
 
-int main()
-{
-    try
-    {
-        Bureaucrat sejuani("sejuani",45);
-        Intern inter;
-        Form *form1 = inter.makeForm("robotomy request", "farwila");
-        form1->beSigned(sejuani);
-        sejuani.signForm(*form1);
-        std::cout << *form1;
-        form1->execute(sejuani);
-
-    }
-    catch(std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-    return (0);
+int main(int argc ,char **agv){
+	if(argc == 1)
+	{
+		std::cout<< "aargument invalide"<<std::endl;
+		return 0;
+	}
+	(void)argc;
+	Convert c;
+	c.CheckType(agv[1]);
+	c.AfficherType();;
 }

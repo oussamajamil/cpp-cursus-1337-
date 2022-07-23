@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 12:31:00 by ojamil            #+#    #+#             */
-/*   Updated: 2022/07/11 12:39:58 by ojamil           ###   ########.fr       */
+/*   Updated: 2022/07/11 12:39:45 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,20 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
-#include "Intern.hpp"
 
 int main()
 {
     try
     {
-        Bureaucrat sejuani("sejuani",45);
-        Intern inter;
-        Form *form1 = inter.makeForm("robotomy request", "farwila");
-        form1->beSigned(sejuani);
-        sejuani.signForm(*form1);
-        std::cout << *form1;
-        form1->execute(sejuani);
+        Bureaucrat oussama("sejuani",45);
+        RobotomyRequestForm form1("samir");
+		ShrubberyCreationForm form2("oussama");
+		form2.action(oussama);
+        oussama.signForm(form1);
+        form1.beSigned(oussama);
+        std::cout << form1;
+        oussama.executeForm(form1);
+        form1.execute(oussama);
 
     }
     catch(std::exception &e)
